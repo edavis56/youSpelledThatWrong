@@ -81,7 +81,7 @@ Run the HTML file in the internet browser:
 
 ## Deployed application
 
-https://edavis56.github.io/youSpelledThatWrong/
+https://git.heroku.com/cooleditorman.git
 
 ## GitHub Repository
 
