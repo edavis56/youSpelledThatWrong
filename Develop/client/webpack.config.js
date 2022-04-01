@@ -18,13 +18,11 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: "Jate",
+        title: 'JATE'
       }),
 
-      // Injects our custom service worker
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
@@ -33,11 +31,11 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Jate Text Editor',
-        short_name: 'Jate',
-        description: 'text editor!',
-        background_color: '#225ca3',
-        theme_color: '#225ca3',
+        name: 'JATE- Just Another Text Editor',
+        short_name: 'JATE',
+        description: 'A PWA base text editor',
+        background_color: '#1747eb',
+        theme_color: '#1747eb',
         start_url: '/',
         publicPath: '/',
         icons: [
@@ -47,29 +45,27 @@ module.exports = () => {
             destination: path.join('assets', 'icons'),
           },
         ],
-      })
+      }),
     ],
 
     module: {
       rules: [
-        {
+         {
           test: /\.css$/i,
-          use: ["style-loader", "css-loader"],
-        },
-        {
+          use: ['style-loader', 'css-loader'],
+         },
+         
+         {
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
-            loader: "babel-loader",
+            loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-              plugins: [
-                "@babel/plugin-proposal-object-rest-spread",
-                "@babel/transform-runtime",
-              ],
-            }
-          }
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime']
+         }
         }
+      }
       ],
     },
   };
