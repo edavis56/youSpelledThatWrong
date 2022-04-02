@@ -30,7 +30,7 @@ SO THAT I can reliably retrieve them for later use
 
 ## 💻 Below is a screenshot of the application:
 
-![Crazy Good Weather App](/2022-03-30_22-16-37.jpg)
+![JATE](/Assets/Capture.JPG)
 
 ## Acceptance Criteria
 
@@ -73,7 +73,7 @@ Dependencies: VS Studio and Internet Browser.
 
 💻
 
-Run the HTML file in the internet browser:
+Run this application within Heroku
 
 ## Testing
 
